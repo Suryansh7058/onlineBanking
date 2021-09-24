@@ -1,0 +1,113 @@
+.footer{
+    background: $darkBlue;
+    color:white;
+    padding: 2.5rem;
+    text-align: center;
+
+
+    .container{
+        @include breakpoint-up(large){
+            display: grid;
+            grid-template-columns: repeat(3,1fr) 2fr;
+            grid-template-rows:r 1fr auto;
+            grid-template-areas: 
+            "logo links1 links2 btn"
+            "social links1 links2 btn";
+            gap:1rem;
+            place-items: center start;
+        }
+    }
+
+    a{
+        color:$white;
+        display:inline-block;
+        font-size: 0.9375rem;
+    }
+    
+
+    &__logo{
+        margin-bottom: 1.875rem;
+        @include breakpoint-up(large){
+            grid-area: logo;
+            // place-self: center start;
+        }
+    }
+
+    &__socialmedia{
+        margin-bottom: 1.875rem;
+
+        @include breakpoint-up(large){
+
+            grid-area: social;
+        }
+        a{
+            transition: all 150ms ease-in-out;
+
+            &:hover svg path{
+                transition: all 150ms ease-in-out;
+                fill:hsl(164,61%,47%);
+            }
+        }
+
+        a:not(:last-child){
+            margin-right:1rem;
+        }
+    }
+
+    &__links{
+        display: flex;
+        flex-direction: column;
+        line-height:2.25;
+
+        
+        @include breakpoint-up(large){
+            justify-content: space-between;
+            align-items: center;
+
+        }
+        &.col1{
+            @include breakpoint-up(large){
+                margin-bottom: 1.875rem;
+                grid-area: links1;
+            }
+        }
+
+        &.col2{
+        margin-bottom: 1.875rem;
+            @include breakpoint-up(large){
+                grid-area: links2;
+            }
+        }
+        a{ 
+            transition: all 150ms ease-in-out;
+
+            &:hover{
+                transition: all 150ms ease-in-out;
+                color:hsl(164,61%,47%);
+            }
+        }
+    }
+
+    &__btn{
+
+        
+        @include breakpoint-up(large){
+            grid-area: btn;
+            justify-self: end;
+            align-self: center;
+        }
+        margin-bottom: 1.875rem;
+        
+    }
+
+    &__copyright{
+        margin-bottom: 1.875rem;
+        margin-top: 1.875rem;
+        font-size: 0.9375rem;
+        @include breakpoint-up(large){
+            grid-area: copyright;
+        }
+        color:$grayishBlue;
+        
+    }
+}

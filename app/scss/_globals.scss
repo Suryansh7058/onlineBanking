@@ -1,0 +1,98 @@
+html{
+    font-size: 100%;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+*,*::before,*::after{
+        box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+    line-height: 1.3;
+    color:$grayishBlue;
+    font-family: 'Public Sans',sans serif;
+    font-size: $font-m;
+}
+
+.no-scroll{
+    overflow: hidden;
+}
+
+//spacing
+.container{
+    max-width: 1113px;
+    margin:0 auto;
+
+
+    &--pall{
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+        padding-top: 2.25rem;
+        padding-bottom: 2.25rem;
+    }
+
+    &--py{
+        padding-top: 2.25rem;
+        padding-bottom: 2.25rem;
+    }
+    &--px{
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+    &--pt{
+        padding-top: 2.25rem;
+    }
+    &--pr{
+        padding-right: 1.5rem;
+    }
+    &--pb{
+        padding-bottom: 2.25rem;
+    }
+    &--pl{
+        padding-left: 1.5rem;
+    }
+
+
+
+
+
+}
+.flex{
+    display: flex;
+
+    &-jc-sb{
+        justify-content: space-between;
+    }
+    &-jc-c{
+        justify-content: center;
+    }
+    &-ai-c{
+        align-items: center;
+    }
+
+}
+
+h1, h2, h3, p{
+    margin-top: 0;
+    padding: 0;
+}
+
+
+
+a, a:visited ,a:hover{
+    text-decoration: none;
+}
+
+.hide-for-mobile{
+    @include breakpoint-down(medium){
+        display: none;
+
+    }
+}
+
+.hide-for-desktop{
+    @include breakpoint-up(large){
+        display: none;
+    }
+}

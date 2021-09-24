@@ -1,0 +1,58 @@
+.features{
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(4,1fr);
+    background: $lightGrayishBlue;
+    padding:5.5rem 7.75rem;
+    row-gap: 3.75rem;
+
+    @include breakpoint-down(medium){
+        grid-template-columns: 1fr;
+        padding:0;
+        text-align: center;
+    }
+
+    &__header{
+        grid-column: 1/5;
+        
+        @include breakpoint-down(medium){
+            grid-column: 1;
+        }
+        
+        h2{
+            font-weight: 400;
+            font-size: 1.875rem;
+            color:$darkBlue;
+            margin-bottom: 1.5625rem;
+        }
+        
+        p{
+            max-width:40rem;
+            line-height:1.5;
+            @include breakpoint-down(medium){
+                text-align: center;
+                padding:0 1.5rem;
+            }
+        }
+    }
+    &__feature{
+        padding:.75rem;
+        img{
+            margin-bottom:2.1875rem;
+        }
+        h3{
+            margin-bottom:1.5625rem;
+            font-weight: 400;
+            color:$darkBlue;
+        }
+        p{
+            font-size: 0.995rem;
+            line-height:1.5;
+            @include breakpoint-down(medium){
+                text-align: center;
+                padding:0 1.2rem;
+            }
+        }
+    }
+
+}

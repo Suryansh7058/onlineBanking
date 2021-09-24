@@ -1,0 +1,92 @@
+.contact-details{
+
+    display:flex;
+    justify-content: center;
+    align-items: center;
+
+
+    &__imageblock{
+    transform: translateY(-15px);
+    padding:1rem 2rem;
+    border-radius:15px;
+
+    background-color: $darkBlue;
+        .svg-icon {
+            width: 3em;
+            height: 3em;
+        }
+          
+          .svg-icon path,
+          .svg-icon polygon,
+          .svg-icon rect {
+            fill:$limeGreen;
+          }
+          
+          .svg-icon circle {
+            stroke: #4691f6;
+            stroke-width: 1;
+          }
+    }
+}
+
+
+.contact{
+    padding:3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    &__title{
+        margin-top: 2rem;
+        color:$darkBlue;
+        & h4{
+            color:$grayishBlue;
+        }
+    }
+    &__form{
+        padding:1rem 2rem;
+        border:1px solid black;
+        width:50rem;
+        border-radius:1.625rem;
+        box-shadow: 0.125rem 0.125rem 0.5rem rgba(0,0,0,0.5);
+        &__control{
+            label{
+                display: block;
+                color:$darkBlue;
+                cursor:pointer;
+                margin-bottom: 0.5rem;
+            }
+            input{
+                width:100%;
+                border-radius: 5px;
+                line-height:1.5;
+                border-color: $veryLightGray;
+                outline: none;
+                margin-bottom: 0.5rem;
+                line-height:2em;
+
+                &:focus{
+                    border-color:$darkBlue;
+                    background:hsl(136, 65%, 90%);
+                }
+            }
+        }
+        &__btn{
+            padding:14px 35px;
+            border-radius: 1000px;
+            cursor: pointer;
+            background: linear-gradient(90deg,$limeGreen , $brightCyan);
+            outline: none;
+            border: none;
+            color:$white;
+            font-weight: 700;
+            transition: opacity 250ms ease-in-out;
+            &:hover,
+            &:active,
+            &:focus{
+                opacity: 0.5;
+            }
+        }
+    }
+}
